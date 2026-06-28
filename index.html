@@ -3,598 +3,302 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Imran Akber — AVP-1 System Administrator | Banking IT</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+<title>Imran Akber | Senior Infrastructure Engineer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-:root{
-  --navy:#0d1b35;
-  --navy2:#162447;
-  --teal:#1a7fa8;
-  --teal-light:#e8f4f8;
-  --gold:#c9933a;
-  --gold-bg:#fdf6ec;
-  --cream:#f7f8fa;
-  --white:#ffffff;
-  --text:#1c2333;
-  --text2:#4a5568;
-  --text3:#718096;
-  --border:#e2e8f0;
-  --r:6px;
-}
-html{scroll-behavior:smooth;}
-body{font-family:'Inter',sans-serif;background:var(--cream);color:var(--text);font-size:15px;line-height:1.7;}
-
-/* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(13,27,53,0.97);backdrop-filter:blur(10px);height:58px;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;border-bottom:1px solid rgba(26,127,168,0.25);}
-.nav-logo{font-family:'Playfair Display',serif;color:#fff;font-size:1.1rem;text-decoration:none;letter-spacing:0.01em;}
-.nav-logo span{color:var(--teal);}
-.nav-links{display:flex;gap:2rem;list-style:none;}
-.nav-links a{color:rgba(255,255,255,0.65);text-decoration:none;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;transition:color 0.2s;}
-.nav-links a:hover{color:#fff;}
-
-/* HERO */
-.hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;padding:80px 2.5rem 5rem;position:relative;overflow:hidden;}
-.hero-accent{position:absolute;top:0;right:0;width:45%;height:100%;background:linear-gradient(135deg,transparent 50%,rgba(26,127,168,0.07));pointer-events:none;}
-.hero-line{position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--teal),transparent);}
-.hero-inner{max-width:920px;margin:0 auto;width:100%;}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--teal);font-size:11.5px;letter-spacing:0.14em;text-transform:uppercase;margin-bottom:1.4rem;}
-.eyebrow::before{content:'';width:28px;height:1px;background:var(--teal);}
-h1{font-family:'Playfair Display',serif;color:#fff;font-size:clamp(2.6rem,6vw,4.2rem);line-height:1.08;margin-bottom:1.2rem;}
-h1 em{color:var(--teal);font-style:normal;}
-.hero-sub{color:rgba(255,255,255,0.58);font-size:1rem;max-width:580px;margin-bottom:2.2rem;line-height:1.8;}
-.hero-ctas{display:flex;gap:12px;flex-wrap:wrap;}
-.btn-main{padding:12px 26px;background:var(--teal);color:#fff;text-decoration:none;font-size:12.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border-radius:var(--r);transition:background 0.2s,transform 0.15s;}
-.btn-main:hover{background:#1590bc;transform:translateY(-1px);}
-.btn-ghost{padding:12px 26px;border:1px solid rgba(255,255,255,0.25);color:rgba(255,255,255,0.8);text-decoration:none;font-size:12.5px;letter-spacing:0.06em;text-transform:uppercase;border-radius:var(--r);transition:border-color 0.2s,color 0.2s;}
-.btn-ghost:hover{border-color:var(--teal);color:var(--teal);}
-.hero-stats{display:flex;gap:2.8rem;margin-top:3.5rem;padding-top:2.2rem;border-top:1px solid rgba(255,255,255,0.1);}
-.stat-n{font-family:'Playfair Display',serif;font-size:2rem;color:var(--teal);line-height:1;margin-bottom:4px;}
-.stat-l{font-size:11px;color:rgba(255,255,255,0.45);letter-spacing:0.08em;text-transform:uppercase;}
-.hero-certs{margin-top:1.8rem;display:flex;flex-wrap:wrap;gap:8px;}
-.cert-pill{padding:4px 12px;border:1px solid rgba(26,127,168,0.4);border-radius:20px;font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:0.04em;}
-
-/* SECTION COMMON */
-section{padding:5rem 2.5rem;}
-.si{max-width:920px;margin:0 auto;}
-.sl{font-size:11px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--teal);margin-bottom:0.4rem;}
-h2{font-family:'Playfair Display',serif;font-size:clamp(1.7rem,3.5vw,2.4rem);color:var(--navy);line-height:1.2;margin-bottom:2.2rem;}
-
-/* SUMMARY */
-.summary{background:var(--white);}
-.summary-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:3.5rem;align-items:start;}
-.summary-text p{color:var(--text2);margin-bottom:1.1rem;font-size:14.5px;}
-.summary-cards{display:flex;flex-direction:column;gap:12px;}
-.s-card{display:flex;align-items:flex-start;gap:14px;padding:14px 16px;background:var(--cream);border-left:3px solid var(--teal);border-radius:0 var(--r) var(--r) 0;}
-.s-card-icon{font-size:1.2rem;flex-shrink:0;margin-top:2px;}
-.s-card-title{font-weight:600;font-size:13.5px;color:var(--navy);margin-bottom:2px;}
-.s-card-desc{font-size:12.5px;color:var(--text3);}
-
-/* ACHIEVEMENTS */
-.achievements{background:var(--navy);}
-.achievements h2{color:#fff;}
-.achievements .sl{color:#7ecae0;}
-.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;}
-.ach-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:1.3rem;transition:border-color 0.2s,background 0.2s;}
-.ach-card:hover{border-color:rgba(26,127,168,0.45);background:rgba(26,127,168,0.06);}
-.ach-icon{font-size:1.5rem;margin-bottom:10px;}
-.ach-title{font-weight:600;font-size:13.5px;color:#fff;margin-bottom:6px;}
-.ach-desc{font-size:12.5px;color:rgba(255,255,255,0.55);line-height:1.65;}
-
-/* EXPERIENCE */
-.experience{background:var(--cream);}
-.tl{position:relative;padding-left:26px;}
-.tl::before{content:'';position:absolute;left:0;top:10px;bottom:10px;width:1px;background:var(--border);}
-.tl-item{position:relative;margin-bottom:2.5rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border);}
-.tl-item:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
-.tl-item::before{content:'';position:absolute;left:-30px;top:10px;width:9px;height:9px;border-radius:50%;background:var(--teal);border:2px solid var(--white);box-shadow:0 0 0 3px var(--teal);}
-.tl-company{font-weight:700;font-size:15px;color:var(--navy);margin-bottom:2px;}
-.tl-meta{display:flex;align-items:center;gap:10px;margin-bottom:10px;flex-wrap:wrap;}
-.tl-period{font-size:12px;color:var(--text3);background:var(--cream);border:1px solid var(--border);padding:2px 10px;border-radius:20px;}
-.tl-context{font-size:12px;color:var(--teal);font-style:italic;margin-bottom:10px;}
-.role-block{margin-bottom:14px;}
-.role-title{font-weight:600;font-size:14px;color:var(--teal);margin-bottom:6px;}
-.tl-bullets{list-style:none;display:flex;flex-direction:column;gap:6px;}
-.tl-bullets li{font-size:13.5px;color:var(--text2);padding-left:16px;position:relative;line-height:1.65;}
-.tl-bullets li::before{content:'›';position:absolute;left:0;color:var(--teal);font-size:15px;}
-.tl-tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;}
-.tag{padding:3px 10px;font-size:11px;font-weight:500;background:var(--white);border:1px solid var(--border);border-radius:20px;color:var(--text2);}
-
-/* SKILLS */
-.skills{background:var(--white);}
-.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
-.sk-card{background:var(--cream);border:1px solid var(--border);border-radius:10px;padding:1.2rem;transition:border-color 0.2s;}
-.sk-card:hover{border-color:var(--teal);}
-.sk-cat{font-size:11px;font-weight:600;color:var(--teal);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:10px;}
-.sk-list{list-style:none;display:flex;flex-direction:column;gap:5px;}
-.sk-list li{font-size:13px;color:var(--text2);padding-left:14px;position:relative;}
-.sk-list li::before{content:'›';position:absolute;left:0;color:var(--teal);}
-
-/* CERTIFICATIONS */
-.certs{background:var(--navy2);}
-.certs h2{color:#fff;}
-.certs .sl{color:#7ecae0;}
-.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;}
-.cert-item{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:var(--r);}
-.cert-dot{width:8px;height:8px;border-radius:50%;background:var(--teal);flex-shrink:0;margin-top:6px;}
-.cert-name{font-size:13px;color:rgba(255,255,255,0.8);line-height:1.5;}
-
-/* EDUCATION */
-.education{background:var(--cream);}
-.edu-list{display:flex;flex-direction:column;gap:16px;}
-.edu-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.2rem 1.4rem;display:flex;align-items:flex-start;gap:14px;}
-.edu-year{font-size:11px;font-weight:600;color:var(--teal);white-space:nowrap;padding-top:2px;}
-.edu-deg{font-weight:600;font-size:14.5px;color:var(--navy);margin-bottom:3px;}
-.edu-inst{font-size:13px;color:var(--text3);}
-
-/* CONTACT */
-.contact{background:var(--white);}
-.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start;}
-.contact-desc{color:var(--text2);font-size:14.5px;margin-bottom:1.8rem;line-height:1.8;}
-.contact-links{display:flex;flex-direction:column;gap:10px;}
-.c-link{display:flex;align-items:center;gap:12px;padding:13px 16px;border:1px solid var(--border);border-radius:var(--r);text-decoration:none;color:var(--text);font-size:13.5px;transition:border-color 0.2s,color 0.2s;}
-.c-link:hover{border-color:var(--teal);color:var(--teal);}
-.c-link-i{font-size:1.1rem;}
-.cform{display:flex;flex-direction:column;gap:12px;}
-.cform input,.cform textarea{padding:11px 14px;border:1px solid var(--border);border-radius:var(--r);font-family:'Inter',sans-serif;font-size:13.5px;color:var(--text);background:var(--cream);transition:border-color 0.2s;resize:vertical;}
-.cform input:focus,.cform textarea:focus{outline:none;border-color:var(--teal);}
-.cform textarea{min-height:110px;}
-.cform button{padding:12px 24px;background:var(--navy);color:#fff;border:none;cursor:pointer;font-family:'Inter',sans-serif;font-size:12.5px;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;border-radius:var(--r);transition:background 0.2s;}
-.cform button:hover{background:var(--navy2);}
-
-/* FOOTER */
-footer{background:var(--navy);padding:1.8rem 2.5rem;text-align:center;border-top:1px solid rgba(26,127,168,0.2);}
-footer p{color:rgba(255,255,255,0.35);font-size:12px;}
-footer span{color:var(--teal);}
-
-/* RESPONSIVE */
-@media(max-width:700px){
-  .nav-links{display:none;}
-  .summary-grid,.contact-grid{grid-template-columns:1fr;gap:2rem;}
-  .hero-stats{gap:1.8rem;flex-wrap:wrap;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
 }
 
-/* REVEAL */
-.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.55s ease,transform 0.55s ease;}
-.reveal.visible{opacity:1;transform:none;}
-@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+body{
+    background:#f4f7fc;
+    color:#333;
+}
+
+header{
+    background:linear-gradient(135deg,#0f172a,#1e3a8a);
+    color:white;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:40px;
+}
+
+.hero{
+    text-align:center;
+    max-width:900px;
+}
+
+.hero img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid white;
+    object-fit:cover;
+    margin-bottom:25px;
+}
+
+.hero h1{
+    font-size:48px;
+    margin-bottom:15px;
+}
+
+.hero h2{
+    font-size:24px;
+    font-weight:400;
+    color:#cbd5e1;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    background:#2563eb;
+    color:white;
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:40px;
+    margin:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#1d4ed8;
+}
+
+section{
+    padding:80px 10%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:50px;
+    color:#1e3a8a;
+    font-size:36px;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+.card h3{
+    color:#1e3a8a;
+    margin-bottom:20px;
+}
+
+.card ul{
+    list-style:none;
+}
+
+.card li{
+    margin-bottom:12px;
+}
+
+footer{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:40px;
+}
+
+.contact a{
+    color:#60a5fa;
+    text-decoration:none;
+}
 </style>
 </head>
+
 <body>
 
-<nav>
-  <a href="#" class="nav-logo">Imran <span>Akber</span></a>
-  <ul class="nav-links">
-    <li><a href="#summary">About</a></li>
-    <li><a href="#achievements">Achievements</a></li>
-    <li><a href="#experience">Experience</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#certs">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+<header>
+<div class="hero">
 
-<!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-accent"></div>
-  <div class="hero-line"></div>
-  <div class="hero-inner">
-    <div class="eyebrow">Portfolio showcasing my experience in enterprise infrastructure, application support, business continuity, disaster recovery, and IT modernization initiatives.</div>
-    <h1>Imran<br><em>Akber</em></h1>
-    <p class="hero-sub">Results-driven Senior IT Professional with 21 years of progressive experience in banking IT operations, back-office application support, infrastructure administration, and disaster recovery at Standard Chartered Bank and Meezan Bank Limited.</p>
-    <div class="hero-ctas">
-      <a href="#contact" class="btn-main">Get in touch</a>
-      <a href="#experience" class="btn-ghost">View experience</a>
-    </div>
-    <div class="hero-stats">
-      <div><div class="stat-n">21+</div><div class="stat-l">Years experience</div></div>
-      <div><div class="stat-n">30+</div><div class="stat-l">Apps DR-tested</div></div>
-      <div><div class="stat-n">12+</div><div class="stat-l">MS certifications</div></div>
-      <div><div class="stat-n">5K+</div><div class="stat-l">Users supported</div></div>
-    </div>
-    <div class="hero-certs">
-      <span class="cert-pill">MCSE</span>
-      <span class="cert-pill">MCSA</span>
-      <span class="cert-pill">CCNA</span>
-      <span class="cert-pill">MCITP</span>
-      <span class="cert-pill">PEC Registered Engineer</span>
-      <span class="cert-pill">Microsoft ID: 8981862</span>
-    </div>
-  </div>
+    <!-- Replace with your image -->
+    <img src="profile.jpg" alt="Imran Akber">
+
+    <h1>Imran Akber</h1>
+
+    <h2>
+        Senior Infrastructure & Application Support Engineer
+    </h2>
+
+    <p>
+        IT Infrastructure and Application Support professional with
+        20+ years of experience in enterprise infrastructure,
+        banking systems resilience, business continuity,
+        disaster recovery, high availability, and digital
+        transformation initiatives.
+    </p>
+
+    <a href="Resume-Imran-Akber.pdf" class="btn">Download Resume</a>
+    <a href="https://www.linkedin.com/in/imran-akber-2ba096b" class="btn">
+        LinkedIn
+    </a>
+    <a href="https://github.com/imran-593" class="btn">
+        GitHub
+    </a>
+
+</div>
+</header>
+
+<section>
+
+<h2 class="section-title">Core Competencies</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Infrastructure</h3>
+<ul>
+<li>Windows Server Administration</li>
+<li>Active Directory</li>
+<li>VMware Virtualization</li>
+<li>Azure Cloud</li>
+<li>Linux Administration</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Application Support</h3>
+<ul>
+<li>IIS Administration</li>
+<li>SQL Server</li>
+<li>Incident Management</li>
+<li>Change Management</li>
+<li>Performance Monitoring</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Resilience & Security</h3>
+<ul>
+<li>Business Continuity Planning</li>
+<li>Disaster Recovery</li>
+<li>High Availability</li>
+<li>Cybersecurity</li>
+<li>Risk Management</li>
+</ul>
+</div>
+
+</div>
+
 </section>
 
-<!-- SUMMARY -->
-<section class="summary" id="summary">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Professional summary</div>
-      <h2>Banking IT specialist<br>with 21 years of impact</h2>
-    </div>
-    <div class="summary-grid reveal">
-      <div class="summary-text">
-        <p>I am a senior IT professional specialising in banking IT operations and back-office application support. My career spans two of the region's most prestigious banking institutions — Standard Chartered Bank (59 countries, USD 800B+ assets) and Meezan Bank Limited (Pakistan's largest Islamic bank, PKR 2 trillion+ assets).</p>
-        <p>I bring deep expertise in allied application support, EOD/batch process monitoring, compliance & audit controls, and cross-functional collaboration with Trade, Treasury, Compliance, Remittances, ADC, and AML business units.</p>
-        <p>Promoted from AVP-II to AVP-1 at Meezan Bank in January 2025, recognising outstanding performance in application support, compliance, and IT operations. Holds 12+ Microsoft certifications and CCNA.</p>
-      </div>
-      <div class="summary-cards">
-        <div class="s-card"><div class="s-card-icon">🏦</div><div><div class="s-card-title">Banking sector specialist</div><div class="s-card-desc">21 years across Islamic banking, global banking, fund management & data centres</div></div></div>
-        <div class="s-card"><div class="s-card-icon">🔄</div><div><div class="s-card-title">Disaster recovery expert</div><div class="s-card-desc">Led DR drills for 30 mission-critical applications — RTO under 4 hours, zero data loss</div></div></div>
-        <div class="s-card"><div class="s-card-icon">🛡️</div><div><div class="s-card-title">SBP compliance & audit</div><div class="s-card-desc">Zero compliance gaps across all SBP regulatory assessments and IS audit cycles</div></div></div>
-        <div class="s-card"><div class="s-card-icon">🖥️</div><div><div class="s-card-title">Infrastructure & virtualisation</div><div class="s-card-desc">Windows Server, VMware, Hyper-V, SAN, Active Directory across enterprise scale</div></div></div>
-      </div>
-    </div>
-  </div>
+<section>
+
+<h2 class="section-title">Professional Highlights</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Enterprise Infrastructure</h3>
+<p>
+Managed and supported mission-critical enterprise infrastructure
+and banking applications with a focus on reliability and resilience.
+</p>
+</div>
+
+<div class="card">
+<h3>Business Continuity</h3>
+<p>
+Led disaster recovery initiatives and business continuity programs
+to ensure uninterrupted business operations.
+</p>
+</div>
+
+<div class="card">
+<h3>Digital Transformation</h3>
+<p>
+Delivered infrastructure modernization projects and operational
+improvements across enterprise environments.
+</p>
+</div>
+
+</div>
+
 </section>
 
-<!-- ACHIEVEMENTS -->
-<section class="achievements" id="achievements">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Key achievements</div>
-      <h2>Career highlights</h2>
-    </div>
-    <div class="ach-grid reveal">
-      <div class="ach-card">
-        <div class="ach-icon">🏅</div>
-        <div class="ach-title">Promoted AVP-II to AVP-1</div>
-        <div class="ach-desc">Promoted at Meezan Bank Limited in January 2025, recognising outstanding performance in application support, compliance, and IT operations.</div>
-      </div>
-      <div class="ach-card">
-        <div class="ach-icon">🔄</div>
-        <div class="ach-title">DR operations leadership</div>
-        <div class="ach-desc">Led annual DR drill covering 30 mission-critical allied banking applications — coordinated 3–5 engineers, achieved RTO under 4 hours with zero data loss, passed full SBP regulatory audit.</div>
-      </div>
-      <div class="ach-card">
-        <div class="ach-icon">⚡</div>
-        <div class="ach-title">Zero-downtime migration</div>
-        <div class="ach-desc">Executed in-place Windows Server upgrade of 12 production banking servers with zero downtime — completed within after-hours maintenance windows with full UAT sign-off.</div>
-      </div>
-      <div class="ach-card">
-        <div class="ach-icon">🌐</div>
-        <div class="ach-title">Branch network rollout</div>
-        <div class="ach-desc">Managed large-scale infrastructure rollout across Standard Chartered Bank's Pakistan branch network supporting 2,000–5,000 banking users with uninterrupted service continuity.</div>
-      </div>
-      <div class="ach-card">
-        <div class="ach-icon">✅</div>
-        <div class="ach-title">Compliance & audit</div>
-        <div class="ach-desc">Conducted periodic compliance assessments correlated with SBP regulations, IS audit observations, and ITG requirements — ensuring zero compliance gaps.</div>
-      </div>
-      <div class="ach-card">
-        <div class="ach-icon">📋</div>
-        <div class="ach-title">SOPs & documentation</div>
-        <div class="ach-desc">Authored SOPs and runbooks for back-office application operations, standardising procedures and reducing incident response time across teams.</div>
-      </div>
-    </div>
-  </div>
-</section>
+<section>
 
-<!-- EXPERIENCE -->
-<section class="experience" id="experience">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Career history</div>
-      <h2>Professional experience</h2>
-    </div>
-    <div class="tl reveal">
+<h2 class="section-title">Professional Memberships</h2>
 
-      <div class="tl-item">
-        <div class="tl-company">Meezan Bank Limited</div>
-        <div class="tl-meta">
-          <span class="tl-period">Mar 2022 – Present</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="tl-context">Pakistan's largest Islamic bank · PKR 2 trillion+ assets · 1,000+ branches · Allied Application Support</div>
-        <div class="role-block">
-          <div class="role-title">AVP-1 System Administrator (Jan 2025 – Present)</div>
-        </div>
-        <div class="role-block">
-          <div class="role-title">AVP-II System Administrator (Mar 2022 – Dec 2024)</div>
-        </div>
-        <ul class="tl-bullets">
-          <li>First-level technical support bridging application support teams and business operations (Trade, Treasury, Compliance, Remittances, ADC, AML name screening)</li>
-          <li>Monitor allied banking applications; analyse EOD processing, batch jobs, and file ingestion issues to minimise system downtime</li>
-          <li>Led DR drill covering 30 mission-critical banking applications — achieved RTO under 4 hours, zero data loss, passed full SBP regulatory audit review</li>
-          <li>Executed in-place Windows Server upgrade of 12 production banking servers with zero downtime and full UAT validation</li>
-          <li>Manage and initialise new back-office applications through UAT; set KPIs, define team roles, and participate in project delivery</li>
-          <li>Establish, implement, and audit IT system controls per SBP regulatory standards and ITG requirements</li>
-          <li>Prepare user manuals, SOPs, and runbooks for back-office applications and interface operations</li>
-          <li>Support MS SQL / MySQL databases; write SQL scripts for data extraction and operational reporting</li>
-        </ul>
-        <div class="tl-tags">
-          <span class="tag">Allied Banking Apps</span><span class="tag">EOD/Batch Processing</span><span class="tag">DR Operations</span><span class="tag">SBP Compliance</span><span class="tag">Windows Server</span><span class="tag">SQL</span>
-        </div>
-      </div>
+<div class="cards">
 
-      <div class="tl-item">
-        <div class="tl-company">Standard Chartered Bank</div>
-        <div class="tl-meta">
-          <span class="tl-period">Dec 2013 – Mar 2022 (8+ years)</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="tl-context">Global banking group · 59 countries · USD 800 billion+ assets · Technology & Country System Support</div>
-        <div class="role-block">
-          <div class="role-title">Technical Analyst</div>
-        </div>
-        <ul class="tl-bullets">
-          <li>Managed large-scale enterprise infrastructure rollout across Pakistan branch network supporting 2,000–5,000 banking users with full-service continuity</li>
-          <li>Led critical incident response for high-severity production outages using ITIL-compliant problem and change management, restoring services within SLA windows</li>
-          <li>Administered SAN storage (Fabric Zoning, LUN masking), MS SQL Server reporting (SSRS), and Windows Server environments</li>
-          <li>Managed ITIL incident, problem, and change processes including high-severity problem control, Remedy tracking, and standards compliance</li>
-          <li>Coordinated international vendors and onsite support engineers to maintain secure, stable, and resilient banking environment</li>
-          <li>Led Microsoft Administration strategy; formally trained and mentored junior IT staff</li>
-        </ul>
-        <div class="tl-tags">
-          <span class="tag">ITIL</span><span class="tag">SAN Storage</span><span class="tag">Incident Management</span><span class="tag">Windows Server</span><span class="tag">Vendor Management</span><span class="tag">SSRS</span>
-        </div>
-      </div>
+<div class="card">
+<h3>ISACA Member</h3>
+<p>
+Information systems governance, cybersecurity, risk management,
+and enterprise resilience.
+</p>
+</div>
 
-      <div class="tl-item">
-        <div class="tl-company">Inbox Business Technology</div>
-        <div class="tl-meta">
-          <span class="tl-period">Jan 2011 – Dec 2013</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="tl-context">Enterprise IT solutions provider</div>
-        <div class="role-block"><div class="role-title">System & Network Engineer</div></div>
-        <ul class="tl-bullets">
-          <li>Deployed and managed enterprise Windows Server environments, VMware virtualisation, Active Directory, MS Exchange 2010, and Lync Server across multiple client sites</li>
-          <li>Implemented security and backup solutions including Microsoft DPM, NAP, TMG Firewall, VPN; managed DHCP/DNS, SAN storage, and thin client environments</li>
-        </ul>
-        <div class="tl-tags"><span class="tag">VMware</span><span class="tag">Active Directory</span><span class="tag">MS Exchange</span><span class="tag">SAN</span><span class="tag">VPN</span></div>
-      </div>
+<div class="card">
+<h3>IEEE Member</h3>
+<p>
+Professional engagement and continuous learning in technology
+and engineering disciplines.
+</p>
+</div>
 
-      <div class="tl-item">
-        <div class="tl-company">Allied Bank Limited</div>
-        <div class="tl-meta">
-          <span class="tl-period">May 2010 – Jan 2011</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="tl-context">One of Pakistan's largest commercial banks · Data Centre / DR Site</div>
-        <div class="role-block"><div class="role-title">Data Center Engineer MG-10</div></div>
-        <ul class="tl-bullets">
-          <li>Managed Data Centre and DR site operations, maintaining 99.9%+ infrastructure uptime through round-the-clock monitoring and system administration</li>
-          <li>Monitored ATM network traffic and conducted NMS-based DR site surveillance ensuring continuous banking service availability</li>
-        </ul>
-        <div class="tl-tags"><span class="tag">Data Centre</span><span class="tag">DR Site</span><span class="tag">NMS</span><span class="tag">ATM Network</span></div>
-      </div>
+</div>
 
-      <div class="tl-item">
-        <div class="tl-company">UBL Fund Managers</div>
-        <div class="tl-meta">
-          <span class="tl-period">Nov 2007 – May 2010</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="tl-context">UBL Group · Fund Management</div>
-        <div class="role-block"><div class="role-title">Sr. Network & System Support Engineer (Tier 6)</div></div>
-        <ul class="tl-bullets">
-          <li>Managed enterprise network infrastructure, email systems, and wireless links between corporate and operations offices using MRTG monitoring tools</li>
-          <li>Provided IT support including hardware/software configuration, user setup, backup, and assisted in building Windows 2000 Domain with RAID 5 servers</li>
-        </ul>
-        <div class="tl-tags"><span class="tag">Network Infrastructure</span><span class="tag">Email Systems</span><span class="tag">MRTG</span><span class="tag">RAID</span></div>
-      </div>
-
-      <div class="tl-item">
-        <div class="tl-company">Comset Services Limited</div>
-        <div class="tl-meta">
-          <span class="tl-period">Apr 2005 – Nov 2007</span>
-          <span class="tl-period">Karachi, Pakistan</span>
-        </div>
-        <div class="role-block"><div class="role-title">Assistant Network Administrator</div></div>
-        <ul class="tl-bullets">
-          <li>Established and administered a LAN of 150+ computers; implemented inter-city VPN between Karachi and Lahore offices and wireless network infrastructure</li>
-          <li>Managed IT equipment inventory, data backups, ISP/vendor coordination, and Siemens exchange systems</li>
-        </ul>
-        <div class="tl-tags"><span class="tag">LAN</span><span class="tag">VPN</span><span class="tag">Windows Server 2003</span><span class="tag">Vendor Coordination</span></div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section class="skills" id="skills">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Technical expertise</div>
-      <h2>Skills & capabilities</h2>
-    </div>
-    <div class="skills-grid reveal">
-      <div class="sk-card">
-        <div class="sk-cat">Application support</div>
-        <ul class="sk-list">
-          <li>Allied banking apps (L1/L2)</li>
-          <li>Back-office applications</li>
-          <li>EOD/batch processing</li>
-          <li>File ingestion monitoring</li>
-          <li>IIS & Node.js app support</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">Server & OS</div>
-        <ul class="sk-list">
-          <li>Windows Server 2008–2019</li>
-          <li>Linux administration</li>
-          <li>VMware ESXi / vSphere</li>
-          <li>Microsoft Hyper-V</li>
-          <li>Server virtualisation</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">Microsoft stack</div>
-        <ul class="sk-list">
-          <li>Active Directory</li>
-          <li>MS Exchange / Lync</li>
-          <li>SCCM</li>
-          <li>MS SQL Always On</li>
-          <li>SSRS reporting</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">Database</div>
-        <ul class="sk-list">
-          <li>MS SQL Server</li>
-          <li>MySQL</li>
-          <li>SQL scripting</li>
-          <li>SSRS</li>
-          <li>SQL Server Mgmt Studio</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">Storage & backup</div>
-        <ul class="sk-list">
-          <li>SAN storage</li>
-          <li>Fabric Zoning / LUN masking</li>
-          <li>Microsoft DPM</li>
-          <li>3rd party backup & restore</li>
-          <li>SSL certificates</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">DR & compliance</div>
-        <ul class="sk-list">
-          <li>DR architecture</li>
-          <li>DR drill operations</li>
-          <li>HA multi-site DR</li>
-          <li>SBP regulatory compliance</li>
-          <li>Audit & compliance controls</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">Networking</div>
-        <ul class="sk-list">
-          <li>DHCP / DNS / TCP-IP</li>
-          <li>VPN</li>
-          <li>TMG Firewall / NAP</li>
-          <li>CCNA-level networking</li>
-        </ul>
-      </div>
-      <div class="sk-card">
-        <div class="sk-cat">ITSM & tools</div>
-        <ul class="sk-list">
-          <li>ITIL incident & change mgmt</li>
-          <li>Jira Service Management</li>
-          <li>Remedy</li>
-          <li>Capacity planning</li>
-          <li>SOPs & runbooks</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CERTIFICATIONS -->
-<section class="certs" id="certs">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Certifications & licensure</div>
-      <h2>Professional credentials</h2>
-    </div>
-    <div class="cert-grid reveal">
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">Registered Engineer — Pakistan Engineering Council (PEC)</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCSE — Server Infrastructure</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCSE — Desktop Infrastructure</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCSE — Messaging</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCSA — Windows Server 2012 & 2016</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCITP — Server Administrator (Windows Server 2008)</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCTS — Windows Server 2012 Active Directory</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCTS — Windows Server 2012 Network Infrastructure</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCTS — Windows 7 Configuration</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MS — Server Virtualisation with Hyper-V & System Center</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">MCPS — Microsoft Certified Professional (ID: 8981862)</div></div>
-      <div class="cert-item"><div class="cert-dot"></div><div class="cert-name">CCNA — Cisco Certified Network Associate</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- EDUCATION -->
-<section class="education" id="education">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Education</div>
-      <h2>Academic background</h2>
-    </div>
-    <div class="edu-list reveal">
-      <div class="edu-item">
-        <div class="edu-year">2001–2005</div>
-        <div>
-          <div class="edu-deg">Bachelor of Engineering (Electronics)</div>
-          <div class="edu-inst">NED University of Engineering & Technology, Karachi — Pakistan's premier engineering university. Registered with Pakistan Engineering Council (PEC).</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-year">1999–2000</div>
-        <div>
-          <div class="edu-deg">FSC Pre-Engineering</div>
-          <div class="edu-inst">Govt. Delhi College, Karachi</div>
-        </div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-year">1997–1998</div>
-        <div>
-          <div class="edu-deg">Matric</div>
-          <div class="edu-inst">Pixy Dale School</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="si">
-    <div class="reveal">
-      <div class="sl">Get in touch</div>
-      <h2>Let's connect</h2>
-    </div>
-    <div class="contact-grid reveal">
-      <div>
-        <p class="contact-desc">Open to senior IT roles, banking technology opportunities, and professional collaborations. Reach out via LinkedIn or the form — I typically respond within 24 hours.</p>
-        <div class="contact-links">
-          <a href="https://www.linkedin.com/in/imran-akber-2ba096b" target="_blank" class="c-link"><span class="c-link-i">💼</span> linkedin.com/in/imran-akber-2ba096b</a>
-          <a href="mailto:imran593@msn.com" class="c-link"><span class="c-link-i">✉️</span> imran593@msn.com</a>
-          <a href="tel:+923343217017" class="c-link"><span class="c-link-i">📞</span> +92-334-3217017</a>
-          <a href="https://github.com/imran-593" target="_blank" class="c-link"><span class="c-link-i">🐙</span> github.com/imran-593</a>
-          <a href="#" class="c-link"><span class="c-link-i">📍</span> Karachi, Pakistan</a>
-        </div>
-      </div>
-      <form class="cform" onsubmit="handleSubmit(event)">
-        <input type="text" placeholder="Your name" required>
-        <input type="email" placeholder="Your email" required>
-        <input type="text" placeholder="Subject">
-        <textarea placeholder="Your message"></textarea>
-        <button type="submit">Send message</button>
-      </form>
-    </div>
-  </div>
 </section>
 
 <footer>
-  <p>© 2026 <span>Imran Akber</span> · AVP-1 System Administrator · Banking IT Operations · Karachi, Pakistan</p>
+
+<div class="contact">
+
+<h2>Contact Me</h2>
+<br>
+
+<p>Email: yourprofessionalemail@outlook.com</p>
+<p>
+LinkedIn:
+<a href="https://www.linkedin.com/in/imran-akber-2ba096b">
+linkedin.com/in/imran-akber-2ba096b
+</a>
+</p>
+
+<p>
+GitHub:
+<a href="https://github.com/imran-593">
+github.com/imran-593
+</a>
+</p>
+
+<p>
+Portfolio:
+<a href="https://imran-593.github.io">
+imran-593.github.io
+</a>
+</p>
+
+</div>
+
+<br>
+<p>© 2026 Imran Akber | All Rights Reserved</p>
+
 </footer>
 
-<script>
-const obs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-}, {threshold: 0.08});
-document.querySelectorAll('.reveal').forEach(r => obs.observe(r));
-
-function handleSubmit(e) {
-  e.preventDefault();
-  const btn = e.target.querySelector('button');
-  btn.textContent = 'Message sent ✓';
-  btn.style.background = '#1a7fa8';
-  setTimeout(() => { btn.textContent = 'Send message'; btn.style.background = ''; e.target.reset(); }, 3000);
-}
-
-const secs = document.querySelectorAll('section[id]');
-const links = document.querySelectorAll('.nav-links a');
-window.addEventListener('scroll', () => {
-  let cur = '';
-  secs.forEach(s => { if(window.scrollY >= s.offsetTop - 80) cur = s.id; });
-  links.forEach(a => { a.style.color = a.getAttribute('href') === '#'+cur ? '#fff' : ''; });
-});
-</script>
 </body>
 </html>
